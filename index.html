@@ -12,13 +12,25 @@
       name="keywords"
       content="HTML, CSS, JavaScript, RevoU, Bootcamp, Software Engineer"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
     <title>My Website - M. Istighfar Amal</title>
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="navbar">
+      <input type="checkbox" id="hamburger-toggle" />
+      <nav class="container navbar-container">
         <span>Logo Edit</span>
-        <ul>
+        <label for="hamburger-toggle" class="hamburger-menu">
+          <span></span>
+        </label>
+        <ul class="nav-links">
           <li><a href="#biodata">Biodata</a></li>
           <li><a href="#pengalaman">Pengalaman</a></li>
           <li><a href="#kontak">Kontak</a></li>
@@ -26,7 +38,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <!-- <main>
       <section id="biodata">
         <h2>Tentang Saya</h2>
         <img src="./profile.png" alt="Foto Profile" />
@@ -210,6 +222,6 @@
 
     <footer>
       <p>&copy; 2025 M. Istighfar Amal</p>
-    </footer>
+    </footer> -->
   </body>
 </html>

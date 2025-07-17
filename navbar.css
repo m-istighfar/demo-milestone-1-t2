@@ -1,0 +1,138 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-white);
+  box-shadow: var(--shadow-navbar);
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.4rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: var(--text-secondary-color);
+  position: relative;
+  padding: 0.8rem 0;
+  transition: color var(--transition-main);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  background-color: var(--primary-color);
+  transition: width var(--transition-main);
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+#hamburger-toggle {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-menu span,
+.hamburger-menu span::before,
+.hamburger-menu span::after {
+  display: block;
+  width: 2.4rem;
+  height: 0.2rem;
+  background-color: var(--text-color);
+  border-radius: 0.3rem;
+  position: relative;
+  transition: all var(--transition-main);
+}
+
+.hamburger-menu span::before,
+.hamburger-menu span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.hamburger-menu span::before {
+  top: -0.8rem;
+}
+
+.hamburger-menu span::after {
+  top: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 6.4rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height var(--transition-main);
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1.6rem 0;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  #hamburger-toggle:checked ~ .container .nav-links {
+    max-height: 50rem;
+  }
+
+  #hamburger-toggle:checked ~ .container .hamburger-menu span {
+    background-color: transparent;
+  }
+
+  #hamburger-toggle:checked ~ .container .hamburger-menu span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  #hamburger-toggle:checked ~ .container .hamburger-menu span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}
