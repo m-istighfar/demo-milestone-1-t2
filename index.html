@@ -1,22 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Portofolio dan Halaman Demo untuk Bootcamp Software Engineer RevoU."
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, RevoU, Bootcamp, Software Engineer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
     <title>My Website - M. Istighfar Amal</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <span>Logo</span>
-        <ul>
+    <header class="navbar">
+      <input type="checkbox" id="hamburger-toggle" />
+      <nav class="container navbar-container">
+        <span>Logo Edit</span>
+        <label for="hamburger-toggle" class="hamburger-menu">
+          <span></span>
+        </label>
+        <ul class="nav-links">
           <li><a href="#biodata">Biodata</a></li>
           <li><a href="#pengalaman">Pengalaman</a></li>
           <li><a href="#kontak">Kontak</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
         </ul>
       </nav>
+      <h1>Tech Enthusiast & Software Engineer</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
     </header>
-    <main>
+    <!-- <main>
       <section id="biodata">
         <h2>Tentang Saya</h2>
         <img src="./profile.png" alt="Foto Profile" />
@@ -27,8 +55,8 @@
         </p>
       </section>
 
-      <section id="pengalaman">
-        <h2>Pengalaman</h2>
+      <section id="experiences">
+        <h2>Pengalaman Kerja</h2>
         <ol>
           <li>
             <h3>Fullstack Developer</h3>
@@ -37,18 +65,46 @@
         </ol>
       </section>
 
-      <section id="kontak">
-        <h2>Kontak Saya</h2>
-        <p>Anda dapat menghubungi saya di</p>
-        <address>
-          Email:
-          <a href="mailto:istighfar.amal@gmail.com">istighfar.amal@gmail.com</a>
-        </address>
+      <hr />
+      <section id="contact">
+        <h2>Hubungi Saya</h2>
+        <form action="/submit-kontak" method="POST">
+          <label for="contact_name">Nama Anda:</label><br />
+          <input
+            type="text"
+            id="contact_name"
+            name="name"
+            required
+            placeholder="Masukkan nama Anda"
+          /><br /><br />
+
+          <label for="contact_email">Email Anda:</label><br />
+          <input
+            type="email"
+            id="contact_email"
+            name="email"
+            required
+            placeholder="Email aktif Anda"
+          /><br /><br />
+
+          <label for="contact_message">Pesan Anda:</label><br />
+          <textarea
+            id="contact_message"
+            name="message"
+            rows="5"
+            cols="40"
+            required
+            placeholder="Tulis pertanyaan Anda..."
+          ></textarea><br /><br />
+
+          <input type="submit" value="Kirim Pesan" />
+        </form>
       </section>
     </main>
 
+    <hr />
     <footer>
       <p>&copy; 2025 M. Istighfar Amal</p>
-    </footer>
+    </footer> -->
   </body>
 </html>
